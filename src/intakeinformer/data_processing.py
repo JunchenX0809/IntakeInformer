@@ -1,4 +1,5 @@
 import pandas as pd
+import re
 
 
 def calculate_calories_from_selection(selected_items):

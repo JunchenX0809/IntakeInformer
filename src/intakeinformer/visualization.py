@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 import os
+import numpy as np
+
 
 def load_dri_combined():
     """
@@ -66,7 +68,7 @@ def plot_calorie_comparison(calorie_data):
 
 
 def plot_nutrient_comparison(actual_nutrients, df_combined, life_stage_info):
-   """
+    """
     Generates and displays a bar chart comparing actual nutrient intake against 
     Dietary Reference Intake (DRI) recommendations for a specific life stage.
 

@@ -1,12 +1,6 @@
-from .data_fetching import *
-from .data_processing import *
-from .visualization import *
-
-
-import requests
-import os
-import json
-import matplotlib.pyplot as plt
+from .data_fetching import _fetch_food_data, get_user_food_selection
+from .data_processing import calculate_calories_from_selection, extract_nutrients
+from .visualization import plot_calorie_comparison, plot_nutrient_comparison
 
 
 import pandas as pd
