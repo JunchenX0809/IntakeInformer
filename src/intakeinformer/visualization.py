@@ -1,4 +1,27 @@
 import matplotlib.pyplot as plt
+import pandas as pd
+import os
+
+def load_dri_combined():
+    """
+    Loads the combined DRI DataFrame from a pickle file.
+    
+    Ensure df_combined is loaded from the pickle file installed alongside all other dependencies and available for use when needed.
+    
+    Returns
+    -------
+    pandas.DataFrame
+        The DataFrame containing combined DRI data.
+    """
+    # Construct the relative path to the pickle file
+    package_directory = os.path.dirname(__file__)  # Directory of the current file
+    relative_path = os.path.join(package_directory, 'data', 'dri_combined.pkl')
+
+    # Load the DataFrame from the pickle file
+    df_combined = pd.read_pickle(relative_path)
+    return df_combined
+
+df_combined = load_dri_combined()
 
 def plot_calorie_comparison(calorie_data):
     """
