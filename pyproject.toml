@@ -6,11 +6,16 @@ authors = ["Junchen Xiong"]
 license = "MIT"
 readme = "README.md"
 
+# Include non-code files in the package
+include = ["src/intakeinformer/data/dri_combined.pkl"]
+
 [tool.poetry.dependencies]
 python = "^3.9"
 pandas = "^2.1.4"
 requests = "^2.31.0"
 matplotlib = "^3.8.2"
+bs4 = "^0.0.1"
+numpy = "^1.26.2"
 
 [tool.poetry.dev-dependencies]
 
