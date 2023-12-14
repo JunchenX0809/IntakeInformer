@@ -1,4 +1,5 @@
 import requests
+from requests.exceptions import HTTPError
 import json
 import os
 import pandas as pd

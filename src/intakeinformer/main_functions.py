@@ -1,11 +1,30 @@
-from .data_fetching import _fetch_food_data, get_user_food_selection
+from .data_fetching import _fetch_food_data, get_user_food_selection, get_user_life_stage
 from .data_processing import calculate_calories_from_selection, extract_nutrients
 from .visualization import plot_calorie_comparison, plot_nutrient_comparison
 
-
+import os
 import pandas as pd
 
-FDC_key = os.getenv('POETRY_FDC_API_KEY')
+def load_dri_combined():
+    """
+    Loads the combined DRI DataFrame from a pickle file.
+    
+    Ensure df_combined is loaded from the pickle file installed alongside all other dependencies and available for use when needed.
+    
+    Returns
+    -------
+    pandas.DataFrame
+        The DataFrame containing combined DRI data.
+    """
+    # Construct the relative path to the pickle file
+    package_directory = os.path.dirname(__file__)  # Directory of the current file
+    relative_path = os.path.join(package_directory, 'data', 'dri_combined.pkl')
+
+    # Load the DataFrame from the pickle file
+    df_combined = pd.read_pickle(relative_path)
+    return df_combined
+
+df_combined = load_dri_combined()
 
 def get_calories_for_food_query(*food_queries):
     """
