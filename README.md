@@ -18,7 +18,27 @@ Setting the API key as an environment variable keeps it secure and easily access
 2. Run the following command, replacing `'your_api_key_here'` with the actual API key you received:
    ```bash
    export POETRY_FDC_API_KEY='your_api_key_here'
-   
+3. To ensure the variable is set, you can run echo $POETRY_FDC_API_KEY. It should display your API key.
+
+**For Windows:**
+
+1. **Open Command Prompt:**
+   - You can search for "cmd" or "Command Prompt" in the Windows search bar and open it.
+
+2. **Set the Environment Variable:**
+   - Run the following command in Command Prompt:
+     ```cmd
+     set POETRY_FDC_API_KEY=your_api_key_here
+     ```
+   - Replace `your_api_key_here` with your actual API key.
+
+3. **Verify the Environment Variable:**
+   - To check if the environment variable is set correctly, run:
+     ```cmd
+     echo %POETRY_FDC_API_KEY%
+     ```
+   - This should display your API key.
+
 ### Step 3: Install and Use IntakeInformer
 1. **Install the Package:**
    - Use pip (or poetry if you're using it) to install `IntakeInformer`.
