@@ -72,17 +72,40 @@ def calculate_calories_from_selection(selected_items):
 
 def extract_nutrients(food_nutrients):
     """
-    Extracts macronutrient information from the foodNutrients data structure, which is the output of get_user_food_selection() function.
-    
+    Extracts macronutrient and other nutrient information from the foodNutrients data structure, 
+    obtained from the USDA FoodData Central API via get_user_food_selection() function.
+
+    This function processes a list of nutrient data for a given food item, identifying and extracting 
+    key nutrients like carbohydrates, proteins, fats, and selected vitamins and minerals. 
+    It utilizes regular expressions to match nutrient names from the data with predefined patterns,
+    ensuring accurate identification despite potential variations in nutrient naming.
+
     Parameters
     ----------
     food_nutrients : list
-        A list of dictionaries, each containing nutrient information for a food item.
-    
+        A list of dictionaries, each representing a nutrient data point for a food item. 
+        Each dictionary typically includes nutrient names, values, units, and other metadata.
+
     Returns
     -------
     dict
-        A dictionary with the macronutrients and their corresponding values.
+        A dictionary mapping nutrient names (e.g., 'Carbohydrate(g/d)', 'Proteinb(g/d)') to their 
+        corresponding values extracted from the food_nutrients data. If a nutrient is not found, 
+        its value in the dictionary is set to None.
+
+    Examples
+    --------
+    >>> food_nutrients = [
+            {'nutrientName': 'Protein', 'value': 2.5},
+            {'nutrientName': 'Total lipid (fat)', 'value': 0.5},
+            {'nutrientName': 'Carbohydrate, by difference', 'value': 30},
+            {'nutrientName': 'Fiber, total dietary', 'value': 2},
+            {'nutrientName': 'Calcium, Ca', 'value': 50},
+            # ... more nutrients ...
+        ]
+    >>> extracted_nutrients = extract_nutrients(food_nutrients)
+    >>> print(extracted_nutrients)
+    {'Carbohydrate(g/d)': 30, 'Total Fiber(g/d)': 2, 'Fat(g/d)': 0.5, 'Proteinb(g/d)': 2.5, 'Calcium (mg/d)': 50, ...}
     """
     
     # Define the regex patterns for the macronutrients
