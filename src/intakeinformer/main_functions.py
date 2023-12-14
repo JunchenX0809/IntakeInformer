@@ -26,7 +26,7 @@ def load_dri_combined():
 
 df_combined = load_dri_combined()
 
-def get_calories_for_food_query(*food_queries):
+def get_calories_for_food_query(FDC_Key, *food_queries):
     """
     Calculates and displays the calorie content per 100g for each queried food item. 
 
@@ -66,7 +66,7 @@ def get_calories_for_food_query(*food_queries):
     selected_items = []
     for query in food_queries:
         # Fetch food data
-        food_df = _fetch_food_data(query)
+        food_df = _fetch_food_data(FDC_Key, query)
 
         # Get user's selection for each query
         print(f"Select an item for '{query}':")
@@ -90,7 +90,7 @@ def get_calories_for_food_query(*food_queries):
 
 
 
-def dri_benchmark(*food_queries):
+def dri_benchmark(FDC_Key, *food_queries):
     """
     Compares the nutrient content of the queried foods against Dietary Reference Intake (DRI) benchmarks.
 
@@ -138,7 +138,7 @@ def dri_benchmark(*food_queries):
     combined_nutrients = {}
 
     for query in food_queries:
-        food_data = _fetch_food_data(query)
+        food_data = _fetch_food_data(FDC_Key, query)
         selected_food = get_user_food_selection(food_data)
 
         # Check if selected_food is not empty before proceeding

@@ -6,11 +6,11 @@ import pandas as pd
 
 from bs4 import BeautifulSoup
 
-FDC_key = os.getenv('POETRY_FDC_API_KEY')
+
 '''
 internal helper function to fetch data from API and parse it into dataframe for future operation
 '''
-def _fetch_food_data(query):
+def _fetch_food_data(FDC_Key, query):
     """
     Fetches food data from the USDA FoodData Central API for a specified query.
 
@@ -46,7 +46,7 @@ def _fetch_food_data(query):
     """
     url_search = "https://api.nal.usda.gov/fdc/v1/foods/search"
     params_search = {
-        "api_key": FDC_key,
+        "api_key": FDC_Key,
         
         "pageSize": 10,     # number of results to return, default to 1 for ease of access
         "pageNumber": 2,   # Page number to retrieve, default to 1
@@ -55,21 +55,17 @@ def _fetch_food_data(query):
         "sortOrder": "asc",
         "query": query
     }
-    try:
-    # Send a GET request
-        response_food_search = requests.get(url_search, params=params_search)
+    data = {}  # Initialize data as an empty dictionary
 
-    # If the response was successful, no Exception will be raised
+    try:
+        response_food_search = requests.get(url_search, params=params_search)
         response_food_search.raise_for_status()
-    except response_food_search.exceptions.HTTPError as http_err:
-    # Specific HTTP error handling
+        data = response_food_search.json()  # Update data with the response
+    except HTTPError as http_err:
         print(f'HTTP error occurred: {http_err}')
     except Exception as err:
-    # General error handling
         print(f'Other error occurred: {err}')
-    else:
-    # Success
-        data = response_food_search.json()
+
 
     if 'foods' in data:
         '''

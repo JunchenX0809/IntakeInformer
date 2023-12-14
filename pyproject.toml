@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "intakeinformer"
-version = "0.1.0"
+version = "0.1.6"
 description = "A nutritional tracker warpped around the USDA FoodData Central API. The warpper allows users to track their daily food intake and analyze the nutritional content of their diet based on the USDA food database and their own selections."
 authors = ["Junchen Xiong"]
 license = "MIT"
@@ -14,7 +14,7 @@ python = "^3.9"
 pandas = "^2.1.4"
 requests = "^2.31.0"
 matplotlib = "^3.8.2"
-bs4 = "^0.0.1"
+beautifulsoup4 = "^4.9.3"
 numpy = "^1.26.2"
 
 [tool.poetry.dev-dependencies]
