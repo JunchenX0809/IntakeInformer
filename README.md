@@ -18,7 +18,11 @@ Setting the API key as an environment variable keeps it secure and easily access
 2. Run the following command, replacing `'your_api_key_here'` with the actual API key you received:
    ```bash
    export POETRY_FDC_API_KEY='your_api_key_here'
-3. To ensure the variable is set, you can run echo $POETRY_FDC_API_KEY. It should display your API key.
+3. To ensure the variable is set, you can run
+   ```bash
+   echo $POETRY_FDC_API_KEY
+   ```
+   It should display your API key.
 
 **For Windows:**
 
