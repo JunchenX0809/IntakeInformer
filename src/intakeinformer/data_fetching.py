@@ -18,6 +18,8 @@ def _fetch_food_data(FDC_Key, query):
 
     Parameters
     ----------
+    FDC_Key: str
+        The USDA API Key that works as personal access token to the API.
     query : str
         The food query string to search for in the USDA FoodData Central API.
 
@@ -36,7 +38,7 @@ def _fetch_food_data(FDC_Key, query):
 
     Examples
     --------
-    >>> _fetch_food_data("apple")
+    >>> _fetch_food_data(FDC_Key, "apple")
     DataFrame containing data for various apple products, with columns such as 'description', 'brandOwner', and nutritional information.
 
     Notes

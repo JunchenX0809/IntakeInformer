@@ -38,6 +38,8 @@ def get_calories_for_food_query(FDC_Key, *food_queries):
 
     Parameters
     ----------
+    FDC_Key: str
+        The USDA API Key that works as personal access token to the API.
     *food_queries : str
         Variable number of string arguments, each representing a food item query.
         For example, 'banana', 'apple', 'orange'.
@@ -51,7 +53,7 @@ def get_calories_for_food_query(FDC_Key, *food_queries):
 
     Examples
     --------
-    >>> get_calories_for_food_query("banana", "apple", "orange")
+    >>> get_calories_for_food_query(FDC_Key, "banana", "apple", "orange")
     {'BANANA FREEZE DRIED FRUIT': 2000.0, 'GALA APPLES': 28.57, 'ORGANIC VALENCIA ORANGES': 29.22, 'total': 2057.79}
 
     Notes
@@ -105,6 +107,8 @@ def dri_benchmark(FDC_Key, *food_queries):
     
     Parameters
     ----------
+    FDC_Key: str
+        The USDA API Key that works as personal access token to the API.
     *food_queries : str
         Variable number of arguments, each a string representing a food item to query. 
         For example, 'apple', 'banana', 'spinach'.
@@ -117,7 +121,7 @@ def dri_benchmark(FDC_Key, *food_queries):
 
     Examples
     --------
-    >>> dri_benchmark('apple', 'banana', 'spinach')
+    >>> dri_benchmark(FDC_Key, 'apple', 'banana', 'spinach')
     
     This will prompt the user to select specific types of apple, banana, and spinach from a list of options, 
     then display a chart comparing the combined nutrient content of these selections against DRI benchmarks.
