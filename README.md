@@ -11,7 +11,7 @@ You can read more about IntakeInformer [here](https://intakeinformer.readthedocs
      pip install intakeinformer
 ```
 ## Example Usage
-You can check out an [Example Usage Showcase](doc/example.ipynb) here to see two IntakeInformer's core functionalities in action!
+You can check out an [Example Usage Showcase](docs/example.ipynb) here to see two IntakeInformer's core functionalities in action!
 
 ## Getting Started with IntakeInformer
 
