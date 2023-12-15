@@ -1,7 +1,10 @@
 # intakeinformer
 
-A nutritional tracker warpped around the USDA FoodData Central API. The warpper allows users to track their daily food intake and analyze the nutritional content of their diet based on the USDA food database and their own selections.
+A nutritional tracker wrapped around [the FoodData Central USDA API](https://fdc.nal.usda.gov/api-guide.html). The wrapper allows users to track their daily food intake and analyze the nutritional content of their diet based on the USDA food database and their own selections.
 
+#### The two core functionalities of intakeinformer – get_calories_for_food_query() and dri_benchmark() – produce distinct outputs:
+- **Calorie Calculation & Comparison Visualization**: '**get_calories_for_food_query()**' generates a visualization (bar chart) depicting the calorie content per 100g of selected food items alongside a cumulative total. This visual aid helps users intuitively understand the calorie distribution of their food choices.
+- **Nutrient Intake vs. DRI Recommendations**: '**dri_benchmark()**' produces a comparative bar chart that contrasts the actual nutrient intake from selected food items against [Dietary Reference Intakes (DRI)](https://www.ncbi.nlm.nih.gov/books/NBK545442/table/appJ_tab3/?report=objectonly) recommendations for a user-specified life stage. This output is instrumental in evaluating dietary choices against nutritional benchmarks.
 
 ## Installation
 
@@ -9,7 +12,9 @@ A nutritional tracker warpped around the USDA FoodData Central API. The warpper 
      pip install intakeinformer
 ```
 ## Example Usage
-You can check out an [Example Usage Showcase](docs/example.ipynb) here to see two IntakeInformer's core functionalities in action!
+- Because the interactive process for generating outputs with the two core functionalities of intakeinformer – **get_calories_for_food_query()** and **dri_benchmark()**. Example code & output snippets are insufficient to show the complete usage of the package's main functionalities.
+
+Please check out an [Example Usage Showcase](docs/example.ipynb) here to see two of IntakeInformer's core functionalities in action!
 
 ## Getting Started with IntakeInformer
 
