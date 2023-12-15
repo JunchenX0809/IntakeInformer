@@ -2,6 +2,14 @@
 
 A nutritional tracker warpped around the USDA FoodData Central API. The warpper allows users to track their daily food intake and analyze the nutritional content of their diet based on the USDA food database and their own selections.
 
+## Installation
+
+```python
+     pip install intakeinformer
+```
+## Example Usage
+You can check out an [Example Usage Showcase](doc/example.ipynb) here to see two IntakeInformer's core functionalities in action!
+
 ## Getting Started with IntakeInformer
 
 ### Step 1: Obtain a USDA FoodData Central API Key
@@ -64,10 +72,6 @@ Setting the API key as an environment variable keeps it secure and easily access
 ### Step 5: Seeking Help
 - If you run into any issues or have questions, refer to the documentation of `IntakeInformer` or reach out for support as provided by the package.
 
-
-## Usage
-
-- Link to the example.ipynb file
 
 ## Contributing
 
