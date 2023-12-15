@@ -67,7 +67,7 @@ Setting the API key as an environment variable keeps it secure and easily access
 
 ## Usage
 
-- TODO
+- Link to the example.ipynb file
 
 ## Contributing
 
