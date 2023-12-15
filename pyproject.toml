@@ -6,6 +6,10 @@ authors = ["Junchen Xiong"]
 license = "MIT"
 readme = "README.md"
 
+documentation = 'https://intakeinformer.readthedocs.io'
+homepage = "https://github.com/JunchenX0809/IntakeInformer.git"
+repository = "https://github.com/JunchenX0809/IntakeInformer.git"
+ 
 # Include non-code files in the package
 include = ["src/intakeinformer/data/dri_combined.pkl"]
 
