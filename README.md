@@ -60,7 +60,7 @@ Setting the API key as an environment variable keeps it secure and easily access
 ### Step 3: Install and Use IntakeInformer
 1. **Install the Package:**
    - Use pip (or poetry if you're using it) to install `IntakeInformer`.
-   - Command: `pip install IntakeInformer` (or the appropriate command if using poetry).
+   - Command: `pip install intakeinformer` (or the appropriate command if using poetry).
 
 2. **Using IntakeInformer:**
    - Import and use the functions from IntakeInformer in your Python scripts or interactive environment.
