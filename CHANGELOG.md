@@ -26,3 +26,8 @@
 
 -  ## v0.1.6 (14/12/2023)
 - Minor Fix.
+
+- ## v1.0.0 (14/12/2023)
+- Read the Docs Remote Rendering Ready.
+- Set up testing files for selected functions.
+- PyPi ready.
