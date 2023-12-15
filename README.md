@@ -3,7 +3,7 @@
 A nutritional tracker wrapped around [the FoodData Central USDA API](https://fdc.nal.usda.gov/api-guide.html). The wrapper allows users to track their daily food intake and analyze the nutritional content of their diet based on the USDA food database and their own selections.
 
 #### The two core functionalities of intakeinformer – get_calories_for_food_query() and dri_benchmark() – produce distinct outputs:
-- **Calorie Calculation & Comparison Visualization**: '**get_calories_for_food_query()**' generates a visualization (bar chart) depicting the calorie content per 100g of selected food items alongside a cumulative total. This visual aid helps users intuitively understand the calorie distribution of their food choices.
+- **Calorie Calculation & Comparison Visualization**: '**get_calories_for_food_query()**' calculates and returns the calorie content of a user-selected food query, normalized to a standard serving size of 100g. The calorie calculation considers the three main macronutrients (carbohydrates, fats, and proteins) of the food and generates a visualization (bar chart) depicting the calorie content per 100g of selected food items alongside a cumulative total. This visual aid helps users intuitively understand the calorie distribution of their food choices.
 - **Nutrient Intake vs. DRI Recommendations**: '**dri_benchmark()**' produces a comparative bar chart that contrasts the actual nutrient intake from selected food items against [Dietary Reference Intakes (DRI)](https://www.ncbi.nlm.nih.gov/books/NBK545442/table/appJ_tab3/?report=objectonly) recommendations for a user-specified life stage. This output is instrumental in evaluating dietary choices against nutritional benchmarks.
 
 ## Installation
